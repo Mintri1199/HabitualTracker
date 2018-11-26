@@ -16,7 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // Create and set the window to be the same size as the screen
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        // Create an instance of the main viewcontroller
+        let navigationController =  UINavigationController()
+        let mainViewController = HabitsTableViewController.instantiate()
+        navigationController.setViewControllers([mainViewController], animated: false)
+
+        
+        // tell the window to laod the main controller as it's  root view
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+        
         return true
     }
 

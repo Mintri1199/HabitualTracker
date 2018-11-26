@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		44890B9121ABA9DD0048C518 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44890B9021ABA9DD0048C518 /* AppDelegate.swift */; };
-		44890B9321ABA9DD0048C518 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44890B9221ABA9DD0048C518 /* ViewController.swift */; };
-		44890B9621ABA9DD0048C518 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44890B9421ABA9DD0048C518 /* Main.storyboard */; };
 		44890B9921ABA9DD0048C518 /* HabitualTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 44890B9721ABA9DD0048C518 /* HabitualTracker.xcdatamodeld */; };
 		44890B9B21ABA9DE0048C518 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44890B9A21ABA9DE0048C518 /* Assets.xcassets */; };
 		44890B9E21ABA9DE0048C518 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44890B9C21ABA9DE0048C518 /* LaunchScreen.storyboard */; };
 		44890BA921ABA9DE0048C518 /* HabitualTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44890BA821ABA9DE0048C518 /* HabitualTrackerTests.swift */; };
 		44890BB421ABA9DE0048C518 /* HabitualTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44890BB321ABA9DE0048C518 /* HabitualTrackerUITests.swift */; };
+		44890BC321ABABCE0048C518 /* HabitsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44890BC121ABABCE0048C518 /* HabitsTableViewController.swift */; };
+		44890BC421ABABCE0048C518 /* HabitsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44890BC221ABABCE0048C518 /* HabitsTableViewController.xib */; };
+		44890BC721ABAC7B0048C518 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44890BC621ABAC7B0048C518 /* UIViewControllerExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +38,6 @@
 /* Begin PBXFileReference section */
 		44890B8D21ABA9DD0048C518 /* HabitualTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitualTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44890B9021ABA9DD0048C518 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		44890B9221ABA9DD0048C518 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		44890B9521ABA9DD0048C518 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		44890B9821ABA9DD0048C518 /* HabitualTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HabitualTracker.xcdatamodel; sourceTree = "<group>"; };
 		44890B9A21ABA9DE0048C518 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44890B9D21ABA9DE0048C518 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +48,9 @@
 		44890BAF21ABA9DE0048C518 /* HabitualTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HabitualTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		44890BB321ABA9DE0048C518 /* HabitualTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitualTrackerUITests.swift; sourceTree = "<group>"; };
 		44890BB521ABA9DE0048C518 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44890BC121ABABCE0048C518 /* HabitsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsTableViewController.swift; sourceTree = "<group>"; };
+		44890BC221ABABCE0048C518 /* HabitsTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HabitsTableViewController.xib; sourceTree = "<group>"; };
+		44890BC621ABAC7B0048C518 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				44890B9021ABA9DD0048C518 /* AppDelegate.swift */,
-				44890B9221ABA9DD0048C518 /* ViewController.swift */,
-				44890B9421ABA9DD0048C518 /* Main.storyboard */,
+				44890BC621ABAC7B0048C518 /* UIViewControllerExtensions.swift */,
+				44890BC521ABABE20048C518 /* Views */,
 				44890B9A21ABA9DE0048C518 /* Assets.xcassets */,
 				44890B9C21ABA9DE0048C518 /* LaunchScreen.storyboard */,
 				44890B9F21ABA9DE0048C518 /* Info.plist */,
@@ -126,6 +128,15 @@
 				44890BB521ABA9DE0048C518 /* Info.plist */,
 			);
 			path = HabitualTrackerUITests;
+			sourceTree = "<group>";
+		};
+		44890BC521ABABE20048C518 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				44890BC121ABABCE0048C518 /* HabitsTableViewController.swift */,
+				44890BC221ABABCE0048C518 /* HabitsTableViewController.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,8 +244,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				44890B9E21ABA9DE0048C518 /* LaunchScreen.storyboard in Resources */,
+				44890BC421ABABCE0048C518 /* HabitsTableViewController.xib in Resources */,
 				44890B9B21ABA9DE0048C518 /* Assets.xcassets in Resources */,
-				44890B9621ABA9DD0048C518 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +270,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44890B9321ABA9DD0048C518 /* ViewController.swift in Sources */,
+				44890BC721ABAC7B0048C518 /* UIViewControllerExtensions.swift in Sources */,
 				44890B9121ABA9DD0048C518 /* AppDelegate.swift in Sources */,
 				44890B9921ABA9DD0048C518 /* HabitualTracker.xcdatamodeld in Sources */,
+				44890BC321ABABCE0048C518 /* HabitsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +309,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		44890B9421ABA9DD0048C518 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				44890B9521ABA9DD0048C518 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		44890B9C21ABA9DE0048C518 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
