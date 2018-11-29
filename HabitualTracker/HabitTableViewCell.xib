@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="habitCell" id="KGk-i7-Jjw" customClass="HabitTableViewCell" customModule="HabitualTracker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="430" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="392" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="M4s-E2-1KM">
+                        <rect key="frame" x="0.0" y="0.0" width="392" height="43.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QQI-T6-oiF">
+                                <rect key="frame" x="0.0" y="0.0" width="75" height="43.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Title Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bT3-lQ-YeS">
+                                <rect key="frame" x="85" y="0.0" width="177.5" height="43.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Streak Count: 0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0A-g8-IRd" userLabel="StreakCount">
+                                <rect key="frame" x="272.5" y="0.0" width="119.5" height="43.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="bT3-lQ-YeS" firstAttribute="top" secondItem="yEq-yX-uwR" secondAttribute="top" id="6mn-ly-6vm"/>
+                            <constraint firstItem="QQI-T6-oiF" firstAttribute="leading" secondItem="yEq-yX-uwR" secondAttribute="leading" id="UaN-2x-Ca8"/>
+                            <constraint firstItem="QQI-T6-oiF" firstAttribute="bottom" secondItem="yEq-yX-uwR" secondAttribute="bottom" id="VrY-GO-zZl"/>
+                            <constraint firstItem="S0A-g8-IRd" firstAttribute="trailing" secondItem="yEq-yX-uwR" secondAttribute="trailing" id="bmV-NP-epJ"/>
+                            <constraint firstItem="S0A-g8-IRd" firstAttribute="top" secondItem="yEq-yX-uwR" secondAttribute="top" id="cQR-4w-cvX"/>
+                            <constraint firstItem="bT3-lQ-YeS" firstAttribute="bottom" secondItem="yEq-yX-uwR" secondAttribute="bottom" id="s2V-aG-Ghe"/>
+                            <constraint firstItem="QQI-T6-oiF" firstAttribute="top" secondItem="yEq-yX-uwR" secondAttribute="top" id="yP0-YD-R15"/>
+                            <constraint firstItem="S0A-g8-IRd" firstAttribute="bottom" secondItem="yEq-yX-uwR" secondAttribute="bottom" id="zBt-av-w6s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yEq-yX-uwR"/>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="M4s-E2-1KM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="M1p-8I-wWJ"/>
+                    <constraint firstAttribute="trailing" secondItem="M4s-E2-1KM" secondAttribute="trailing" id="QsG-Fx-4PX"/>
+                    <constraint firstAttribute="bottom" secondItem="M4s-E2-1KM" secondAttribute="bottom" id="nTF-de-tPg"/>
+                    <constraint firstItem="M4s-E2-1KM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="nbt-sx-OTq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imageViewIcon" destination="QQI-T6-oiF" id="etL-Lz-hUv"/>
+                <outlet property="labelHabitTitle" destination="bT3-lQ-YeS" id="HOX-jR-0JD"/>
+                <outlet property="labelStreaks" destination="S0A-g8-IRd" id="zMt-Kn-9u4"/>
+            </connections>
+            <point key="canvasLocation" x="92.799999999999997" y="77.361319340329842"/>
+        </tableViewCell>
+    </objects>
+</document>
